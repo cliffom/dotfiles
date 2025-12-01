@@ -14,7 +14,9 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:/snap/bin
 
-alias bat=batcat
+if whence -p batcat >/dev/null; then
+    alias bat=batcat
+fi
 alias cat=bat
 alias ll="lsd -la"
 alias vim=nvim
